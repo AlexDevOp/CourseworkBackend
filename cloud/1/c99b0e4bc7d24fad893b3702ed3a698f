@@ -1,0 +1,944 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "СourseworkBackend",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/cloud/load_structure": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCloudStructure"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    },
+    "/api/cloud/rename_folder": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameFolderRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameFolderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameFolderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameFolderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCloudStructure"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    },
+    "/api/cloud/delete_folder": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteFolderRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteFolderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteFolderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteFolderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCloudStructure"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    },
+    "/api/cloud/create_folder": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFolderRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFolderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFolderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFolderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCloudStructure"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    },
+    "/api/cloud/rename_file": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameFileRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameFileRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameFileRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameFileRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCloudStructure"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    },
+    "/api/cloud/delete_file": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteFileRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteFileRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteFileRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteFileRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCloudStructure"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    },
+    "/api/cloud/create_file": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "File",
+                  "fileName",
+                  "folderPath"
+                ],
+                "type": "object",
+                "properties": {
+                  "folderPath": {
+                    "type": "string"
+                  },
+                  "fileName": {
+                    "type": "string"
+                  },
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "folderPath": {
+                  "style": "form"
+                },
+                "fileName": {
+                  "style": "form"
+                },
+                "File": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCloudStructure"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    },
+    "/api/cloud/download_file": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DownloadFileRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DownloadFileRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DownloadFileRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DownloadFileRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    },
+    "/api/cloud/test_upload": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "File",
+                  "fileName",
+                  "folderPath"
+                ],
+                "type": "object",
+                "properties": {
+                  "folderPath": {
+                    "type": "string"
+                  },
+                  "fileName": {
+                    "type": "string"
+                  },
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "folderPath": {
+                  "style": "form"
+                },
+                "fileName": {
+                  "style": "form"
+                },
+                "File": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cloud/test_download": {
+      "post": {
+        "tags": [
+          "CloudApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DownloadTestFileRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DownloadTestFileRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DownloadTestFileRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DownloadTestFileRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hi": {
+      "post": {
+        "tags": [
+          "LoginModule"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/new_user": {
+      "post": {
+        "tags": [
+          "LoginModule"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAccountRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAccountRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAccountRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/login": {
+      "post": {
+        "tags": [
+          "LoginModule"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/device_login": {
+      "post": {
+        "tags": [
+          "LoginModule"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginByDeviceRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginByDeviceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginByDeviceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginByDeviceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/trust_device": {
+      "post": {
+        "tags": [
+          "LoginModule"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrustDeviceRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrustDeviceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrustDeviceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrustDeviceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "SessionToken": [ ]
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateAccountRequest": {
+        "required": [
+          "login",
+          "passFingerprint",
+          "userName"
+        ],
+        "type": "object",
+        "properties": {
+          "login": {
+            "type": "string"
+          },
+          "passFingerprint": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateFolderRequest": {
+        "required": [
+          "newFolderName",
+          "newFolderPath"
+        ],
+        "type": "object",
+        "properties": {
+          "newFolderPath": {
+            "type": "string"
+          },
+          "newFolderName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeleteFileRequest": {
+        "required": [
+          "fileName",
+          "folderPath"
+        ],
+        "type": "object",
+        "properties": {
+          "folderPath": {
+            "type": "string"
+          },
+          "fileName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeleteFolderRequest": {
+        "required": [
+          "folderPath"
+        ],
+        "type": "object",
+        "properties": {
+          "folderPath": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DownloadFileRequest": {
+        "required": [
+          "fileToken",
+          "folderPath"
+        ],
+        "type": "object",
+        "properties": {
+          "folderPath": {
+            "type": "string"
+          },
+          "fileToken": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DownloadTestFileRequest": {
+        "required": [
+          "fileName",
+          "folderPath"
+        ],
+        "type": "object",
+        "properties": {
+          "folderPath": {
+            "type": "string"
+          },
+          "fileName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FileSystemStructureFile": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileEditTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fileHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileLenght": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fileToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FileSystemStructureFolder": {
+        "type": "object",
+        "properties": {
+          "folderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "folderEditTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "folders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileSystemStructureFolder"
+            },
+            "nullable": true
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileSystemStructureFile"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadCloudStructure": {
+        "type": "object",
+        "properties": {
+          "structure": {
+            "$ref": "#/components/schemas/FileSystemStructureFolder"
+          },
+          "lastEdit": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginByDeviceRequest": {
+        "required": [
+          "device_id",
+          "device_token"
+        ],
+        "type": "object",
+        "properties": {
+          "device_id": {
+            "type": "string"
+          },
+          "device_token": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "required": [
+          "login",
+          "passFingerprint"
+        ],
+        "type": "object",
+        "properties": {
+          "login": {
+            "type": "string"
+          },
+          "passFingerprint": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RenameFileRequest": {
+        "required": [
+          "fileName",
+          "fileNewName",
+          "folderPath"
+        ],
+        "type": "object",
+        "properties": {
+          "folderPath": {
+            "type": "string"
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "fileNewName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RenameFolderRequest": {
+        "required": [
+          "folderPath",
+          "newFolderName"
+        ],
+        "type": "object",
+        "properties": {
+          "folderPath": {
+            "type": "string"
+          },
+          "newFolderName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TrustDeviceRequest": {
+        "required": [
+          "deviceFingerprint"
+        ],
+        "type": "object",
+        "properties": {
+          "deviceFingerprint": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "SessionToken": {
+        "type": "apiKey",
+        "description": "Standard Authorization header using the api. Example: \"{token}\"",
+        "name": "SessionToken",
+        "in": "header"
+      }
+    }
+  }
+}
